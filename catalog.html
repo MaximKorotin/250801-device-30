@@ -31,7 +31,7 @@
               <li class="container-top-form">
                 <form class="form-search" method="get" action="https://echo.htmlacademy.ru/">
                   <div class="container-form">
-                    <label class="visually-hidden" for="site-searcht">Поиск по сайту</label>
+                    <label class="visually-hidden" for="site-search">Поиск по сайту</label>
                     <input class="input-search" type="search" id="site-search" name="search" placeholder="Поиск по сайту">
                     <div class="container-button-search">
                       <button class="button-search" type="submit">Найти</button>
@@ -61,27 +61,28 @@
 
           <div class="container-navigation-bottom">
             <ul class="container-bottom-menu">
-              <li class="catalog-list-link" tabindex="0">
-                Каталог товаров
-                <div class="container-bottom-cross">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.7 6.89999V9.09999H9.1V15.7H6.9V9.09999H0.300003V6.89999H6.9V0.299988H9.1V6.89999H15.7Z" fill="black" fill-opacity="0.3"/>
-                  </svg>
-                </div>
-                <div class="container-catalog-list">
-                  <ul class="catalog-bottom-products">
-                    <li><a href="#">Виртуальная реальность</a></li>
-                    <li><a href="catalog.html">Моноподы для селфи</a></li>
-                    <li><a href="#">Экшн-камеры</a></li>
-                  </ul>
-                  <ul class="catalog-bottom-products">
-                    <li><a href="#">Фитнес-браслеты</a></li>
-                    <li><a href="#">Умные часы</a></li>
-                  </ul>
-                  <ul class="catalog-bottom-products">
-                    <li><a href="#">Квадрокоптер</a></li>
-                  </ul>
-                </div>
+              <li class="catalog-list-link">
+                <a class="catalog-item-link" href="#">Каталог товаров</a>
+                <ul class="container-catalog-list">
+                  <li class="catalog-bottom-products">
+                    <ul class="container-catalog-items">
+                      <li><a href="#">Виртуальная реальность</a></li>
+                      <li><a href="catalog.html">Моноподы для селфи</a></li>
+                      <li><a href="#">Экшн-камеры</a></li>
+                    </ul>
+                  </li>
+                  <li class="catalog-bottom-products">
+                    <ul class="container-catalog-items">
+                      <li><a href="#">Фитнес-браслеты</a></li>
+                      <li><a href="#">Умные часы</a></li>
+                    </ul>
+                  </li>
+                  <li class="catalog-bottom-products">
+                    <ul class="container-catalog-items">
+                      <li><a href="#">Квадрокоптер</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
             </ul>
             <ul class="catalog-bottom-items">
@@ -119,10 +120,10 @@
         </div>
 
         <div class="container-catalog-products">
-          <div class="container-catalog-filters"></div>
-          <div class="container-filters"></div>
-          <section class="catalog-filters">
+          <div class="container-catalog-filters">
             <h2>Фильтр:</h2>
+          </div>
+          <div class="container-filters">
             <form class="filters" method="get" action="https://echo.htmlacademy.ru">
               <fieldset>
                 <legend>Стоимость</legend>
@@ -186,35 +187,36 @@
               </fieldset>
               <button type="submit" class="filter-button">Показать</button>
             </form>
-          </section>
+          </div>
+          <div class="container-catalog-sorting">
+            <section class="catalog-sorting">
+              <h2>Сортировка:</h2>
+              <ul class="sorting-items">
+                <li class="sorting-item">
+                  <a class="sorting-item-link sorting-item-link-current" href="#">По цене</a>
+                </li>
+                <li class="sorting-item">
+                  <a class="sorting-item-link" href="#">По типу</a>
+                </li>
+                <li class="sorting-item">
+                  <a class="sorting-item-link" href="#">По популярности</a>
+                </li>
+              </ul>
+              <div class="sorting-control">
+                <a class="sorting-control-link" href="#">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 14H14L8.5 4L3 14Z" fill="black"/>
+                  </svg>
+                </a>
+                <a class="sorting-control-link sorting-control-link-current" href="#">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 4L3 4L8.5 14L14 4Z" fill="black"/>
+                  </svg>
+                </a>
+              </div>
+            </section>
+          </div>
 
-          <div class="container-catalog-sorting"></div>
-          <section class="catalog-sorting">
-            <h2>Сортировка:</h2>
-            <ul class="sorting-items">
-              <li class="sorting-item">
-                <a class="sorting-item-link sorting-item-link-current" href="#">По цене</a>
-              </li>
-              <li class="sorting-item">
-                <a class="sorting-item-link" href="#">По типу</a>
-              </li>
-              <li class="sorting-item">
-                <a class="sorting-item-link" href="#">По популярности</a>
-              </li>
-            </ul>
-            <div class="sorting-control">
-              <a class="sorting-control-link" href="#">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 14H14L8.5 4L3 14Z" fill="black"/>
-                </svg>
-              </a>
-              <a class="sorting-control-link sorting-control-link-current" href="#">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14 4L3 4L8.5 14L14 4Z" fill="black"/>
-                </svg>
-              </a>
-            </div>
-          </section>
 
           <section class="catalog-catalog">
             <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
@@ -411,7 +413,7 @@
         </div>
       </footer>
 
-      <script src="js/input.min.js"></script>
+      <script src="js/script.min.js"></script>
 
     </div>
   </body>

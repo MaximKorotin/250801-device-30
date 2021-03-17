@@ -31,7 +31,7 @@
               <li class="container-top-form">
                 <form class="form-search" method="get" action="https://echo.htmlacademy.ru/">
                   <div class="container-form">
-                    <label class="visually-hidden" for="site-searcht">Поиск по сайту</label>
+                    <label class="visually-hidden" for="site-search">Поиск по сайту</label>
                     <input class="input-search" type="search" id="site-search" name="search" placeholder="Поиск по сайту">
                     <div class="container-button-search">
                       <button class="button-search" type="submit">Найти</button>
@@ -61,27 +61,28 @@
 
           <div class="container-navigation-bottom">
             <ul class="container-bottom-menu">
-              <li class="catalog-list-link" tabindex="0">
-                Каталог товаров
-                <div class="container-bottom-cross">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.7 6.89999V9.09999H9.1V15.7H6.9V9.09999H0.300003V6.89999H6.9V0.299988H9.1V6.89999H15.7Z" fill="black" fill-opacity="0.3"/>
-                  </svg>
-                </div>
-                <div class="container-catalog-list">
-                  <ul class="catalog-bottom-products">
-                    <li><a href="#">Виртуальная реальность</a></li>
-                    <li><a href="catalog.html">Моноподы для селфи</a></li>
-                    <li><a href="#">Экшн-камеры</a></li>
-                  </ul>
-                  <ul class="catalog-bottom-products">
-                    <li><a href="#">Фитнес-браслеты</a></li>
-                    <li><a href="#">Умные часы</a></li>
-                  </ul>
-                  <ul class="catalog-bottom-products">
-                    <li><a href="#">Квадрокоптер</a></li>
-                  </ul>
-                </div>
+              <li class="catalog-list-link">
+                <a class="catalog-item-link" href="#">Каталог товаров</a>
+                <ul class="container-catalog-list">
+                  <li class="catalog-bottom-products">
+                    <ul class="container-catalog-items">
+                      <li><a href="#">Виртуальная реальность</a></li>
+                      <li><a href="catalog.html">Моноподы для селфи</a></li>
+                      <li><a href="#">Экшн-камеры</a></li>
+                    </ul>
+                  </li>
+                  <li class="catalog-bottom-products">
+                    <ul class="container-catalog-items">
+                      <li><a href="#">Фитнес-браслеты</a></li>
+                      <li><a href="#">Умные часы</a></li>
+                    </ul>
+                  </li>
+                  <li class="catalog-bottom-products">
+                    <ul class="container-catalog-items">
+                      <li><a href="#">Квадрокоптер</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
             </ul>
             <ul class="catalog-bottom-items">
@@ -139,7 +140,6 @@
                     Подробнее
                     <span class="visually-hidden">О карбоновом моноподе для селфи</span>
                   </a>
-                  <div class="promo-slider-line"></div>
                 </div>
               </li>
 
@@ -210,40 +210,22 @@
           <h2 class="visually-hidden">Популярные разделы товаров</h2>
           <ul class="popular-sections-items">
             <li class="popular-sections-item">
-              <a class="popular-section-link" href="#">
-                <div class="container-popular-sections"></div>
-                Виртуальная реальность
-              </a>
+              <a class="popular-section-link" href="#">Виртуальная реальность</a>
             </li>
             <li class="popular-sections-item">
-              <a class="popular-section-link" href="#">
-                <div class="container-popular-sections"></div>
-                Моноподы<br> для селфи
-              </a>
+              <a class="popular-section-link" href="#">Моноподы<br> для селфи</a>
             </li>
             <li class="popular-sections-item">
-              <a class="popular-section-link" href="#">
-                <div class="container-popular-sections"></div>
-                Экшн-камеры
-              </a>
+              <a class="popular-section-link" href="#">Экшн-камеры</a>
             </li>
             <li class="popular-sections-item">
-              <a class="popular-section-link" href="#">
-                <div class="container-popular-sections"></div>
-                Фитнес-браслеты
-              </a>
+              <a class="popular-section-link popular-section-link-spacing" href="#">Фитнес-браслеты</a>
             </li>
             <li class="popular-sections-item">
-              <a class="popular-section-link" href="#">
-                <div class="container-popular-sections"></div>
-                Умные часы
-              </a>
+              <a class="popular-section-link" href="#">Умные часы</a>
             </li>
             <li class="popular-sections-item">
-              <a class="popular-section-link" href="#">
-                <div class="container-popular-sections"></div>
-                Квадрокоптеры
-              </a>
+              <a class="popular-section-link" href="#">Квадрокоптеры</a>
             </li>
           </ul>
         </section>
@@ -287,25 +269,33 @@
             <li class="brand-logo">
               <a class="brand-logo-dji" href="#">
                 <span class="visually-hidden">Логотип ди джи ай</span>
-                <div class="brand-logo-image"></div>
+                <div class="brand-logo-image">
+                  <img src="img/icons/logo-1.png" width="260" height="100" alt="Логотип бренда Ди Джи Ай">
+                </div>
               </a>
             </li>
             <li class="brand-logo">
               <a class="brand-logo-sp" href="#">
                 <span class="visually-hidden">Логотип сп гаджетс</span>
-                <div class="brand-logo-image"></div>
+                <div class="brand-logo-image">
+                  <img src="img/icons/logo-2.png" width="260" height="100" alt="Логотип бренда СП Гаджетс">
+                </div>
               </a>
             </li>
             <li class="brand-logo">
               <a class="brand-logo-gopro" href="#">
                 <span class="visually-hidden">Логотип гоу про</span>
-                <div class="brand-logo-image"></div>
+                <div class="brand-logo-image">
+                  <img src="img/icons/logo-3.png" width="260" height="100" alt="Логотип бренда Гоу Про">
+                </div>
               </a>
             </li>
             <li class="brand-logo">
               <a class="brand-logo-vive" href="#">
                 <span class="visually-hidden">Логотип вайв</span>
-                <div class="brand-logo-image"></div>
+                <div class="brand-logo-image">
+                  <img src="img/icons/logo-4.png" width="260" height="100" alt="Логотип бренда Вайв">
+                </div>
               </a>
             </li>
           </ul>
@@ -319,24 +309,9 @@
             <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
             <p class="about-us-paragraph">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
             <ul class="info-company-items">
-              <li class="info-company-item">
-                <svg class="ellipse" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="4" cy="4" r="3" stroke="#E5E5E5" stroke-width="2"/>
-                </svg>
-                Деловые линии
-              </li>
-              <li class="info-company-item">
-                <svg class="ellipse" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="4" cy="4" r="3" stroke="#E5E5E5" stroke-width="2"/>
-                </svg>
-                Автотрейдинг
-              </li>
-              <li class="info-company-item">
-                <svg class="ellipse" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="4" cy="4" r="3" stroke="#E5E5E5" stroke-width="2"/>
-                </svg>
-                ЖелДорЭкспедиция
-              </li>
+              <li class="info-company-item">Деловые линии</li>
+              <li class="info-company-item">Автотрейдинг</li>
+              <li class="info-company-item">ЖелДорЭкспедиция</li>
             </ul>
             <div class="container-button">
               <a class="button" href="#">
@@ -519,11 +494,7 @@
         <button class="modal-feedback-close" type="button" aria-label="Закрыть"></button>
       </section>
 
-      <script src="js/input.min.js"></script>
-      <script src="js/promo-slider.min.js"></script>
-      <script src="js/services-slider.min.js"></script>
-      <script src="js/map.min.js"></script>
-      <script src="js/feedback.min.js"></script>
+      <script src="js/script.min.js"></script>
 
     </div>
   </body>
