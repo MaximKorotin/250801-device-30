@@ -57,6 +57,7 @@
   --special-half-grey: #eaeaea;
   --special-grey-ligh: #f2f2f2;
   --special-yellow: #f7e296;
+  --special-yellow-light: #FFC600;
   --special-yellow-dark: #f0c52e;
   --special-yellow-dark-50: rgba(240, 197, 46, 0.5);
   --special-yellow-dark-30: rgba(240, 197, 46, 0.3);
@@ -2414,22 +2415,25 @@ a {
 /* Footer footer container */
 
 .main-footer .footer-footer-container {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* Footer container line */
-
-.main-footer .footer-container-line {
-  width: 300px;
-  margin: 0;
-  margin-top: 4px;
+.main-footer .footer-footer-container::before {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  content: "";
+  width: 80px;
+  height: 7px;
+  background-color: var(--special-yellow-light);
 }
 
 /* Footer social */
 
 .main-footer .footer-container-social {
-  width: 560px;
+  grid-column: 2/3;
 }
 
 .main-footer .footer-social-items {
@@ -2463,7 +2467,7 @@ a {
 /* Footer logo academy */
 
 .main-footer .footer-container-academy {
-  width: 300px;
+  grid-column: 3/4;
   text-align: end;
 }
 
@@ -2505,7 +2509,7 @@ a {
 .modal-map-close {
   position: absolute;
   top: 29px;
-  right: 2px;
+  right: 29px;
   width: 55px;
   height: 55px;
   background-color: var(--special-yellow-dark-50);
@@ -2698,7 +2702,7 @@ a {
   max-width: 740px;
   min-height: 150px;
   max-height: 150px;
-  padding-top: 16px;
+  padding: 16px 20px;
 }
 
 .modal-feedback .feedback-form-textarea:focus {
