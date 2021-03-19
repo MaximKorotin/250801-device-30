@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icons/180.png">
@@ -13,6 +13,7 @@
 
   <body class="page-body">
     <div class="container">
+      <h1 class="visually-hidden">Интернет магазин "Девайс"</h1>
 
       <header class="mine-header">
 
@@ -331,12 +332,12 @@
             <ul class="footer-navigation-items">
               <li class="footer-navigation-item">
                 <div class="container-output container-output-footer">
-                  <span class="container-output-name">
+                  <a class="container-output-name" href="login.html">
                     <svg class="output-image" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z" fill="#F7E296"/>
+                      <path d="M6.49996 2.33333C7.69704 2.33333 8.66663 3.3775 8.66663 4.66666C8.66663 5.95583 7.69704 7 6.49996 7C5.30288 7 4.33329 5.95583 4.33329 4.66666C4.33329 3.3775 5.30288 2.33333 6.49996 2.33333ZM6.49996 11.6667C6.49996 11.6667 10.8333 11.6667 10.8333 10.5C10.8333 9.1 8.72079 7.58333 6.49996 7.58333C4.27913 7.58333 2.16663 9.1 2.16663 10.5C2.16663 11.6667 6.49996 11.6667 6.49996 11.6667Z" fill="#FFC600"/>
                     </svg>
                     Валентин Петухов
-                  </span>
+                  </a>
                   <a class="output-link output-link-footer" href="#" >Выйти</a>
                 </div>
                 <a class="input-link input-link-footer" href="input.html">
@@ -452,23 +453,23 @@
           <div class="container-feedback-form-top">
             <div class="container-feedback-form">
               <label class="feedback-form-label" for="name">Ваше имя:</label>
-              <input class="feedback-form-input" type="text" name="name" id="name" required placeholder="Имя Фамилия">
+              <input class="feedback-form-input feedback-form-input-name" type="text" name="name" id="name" placeholder="Имя Фамилия">
             </div>
             <div class="container-feedback-form">
               <label class="feedback-form-label" for="email">Ваш e-mail:</label>
-              <input class="feedback-form-input" type="email" name="email" id="email" required placeholder="email@example.com">
+              <input class="feedback-form-input feedback-form-input-email" type="email" name="email" id="email" placeholder="email@example.com">
             </div>
           </div>
           <div class="container-feedback-form-bottom container-feedback-form">
             <label class="feedback-form-label" for="letter">Текст письма:</label>
-            <textarea class="feedback-form-textarea" name="letter" id="letter" required placeholder="В свободной форме"></textarea>
+            <textarea class="feedback-form-textarea" name="letter" id="letter" placeholder="В свободной форме"></textarea>
           </div>
           <button class="feedback-form-button" type="submit">Отправить</button>
         </form>
         <button class="modal-feedback-close" type="button" aria-label="Закрыть"></button>
       </section>
 
-      <script src="js/script.min.js"></script>
+      <script src="js/script.js"></script>
 
     </div>
   </body>

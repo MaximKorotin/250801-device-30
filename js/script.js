@@ -6,6 +6,10 @@ const containerOutputF = document.querySelector(".container-output-footer");
 const outputLinkF = document.querySelector(".output-link-footer");
 const feedbackButton = document.querySelector(".feedback-button");
 const modalFeedback = document.querySelector(".modal-feedback");
+const feedbackForm = modalFeedback.querySelector(".feedback-form");
+const formName = modalFeedback.querySelector(".feedback-form-input-name");
+const formEmail = modalFeedback.querySelector(".feedback-form-input-email");
+const formTextarea = modalFeedback.querySelector(".feedback-form-textarea");
 const mapButton = document.querySelector(".container-contacts-map");
 const modalMap = document.querySelector(".modal-map");
 const firstButton = document.querySelector(".promo-slider-button-first");
@@ -20,6 +24,17 @@ const thirdServicesButton = document.querySelector(".services-slider-button-thir
 const firstServicesSlider = document.querySelector(".service-item-first");
 const secondServicesSlider = document.querySelector(".service-item-second");
 const thirdServicesSlider = document.querySelector(".service-item-third");
+
+let isStorageSupport = true;
+let storageName = "";
+let storageEmail = "";
+
+try {
+  storageName = localStorage.getItem("name");
+  storageEmail = localStorage.getItem("email");
+} catch (err) {
+  isStorageSupport = false;
+}
 
 inputLinkH.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -66,9 +81,36 @@ if (modalFeedback) {
     feedbackClose.addEventListener("click", function (evt) {
       evt.preventDefault();
       modalFeedback.classList.remove("madal-feedback-open");
+      modalFeedback.classList.remove("modal-feedback-error");
     });
   }
 }
+
+if (modalFeedback) {
+  feedbackForm.addEventListener("submit", function (evt) {
+    if (!formName.value || !formEmail.value || !formTextarea.value) {
+      evt.preventDefault();
+      modalFeedback.classList.remove("modal-feedback-error");
+      modalFeedback.offsetWidth = modalFeedback.offsetWidth;
+      modalFeedback.classList.add("modal-feedback-error");
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem("name", formName.value);
+        localStorage.setItem("email", formEmail.value);
+      }
+    }
+  });
+}
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (modalFeedback.classList.contains("madal-feedback-open")) {
+      evt.preventDefault();
+      modalFeedback.classList.remove("madal-feedback-open");
+      modalFeedback.classList.remove("modal-feedback-error");
+    }
+  }
+});
 
 if (mapButton) {
   mapButton.addEventListener("click", function (evt) {
@@ -86,6 +128,15 @@ if (modalMap) {
     });
   }
 }
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (modalMap.classList.contains("modal-map-open")) {
+      evt.preventDefault();
+      modalMap.classList.remove("modal-map-open");
+    }
+  }
+});
 
 if (firstButton) {
   firstButton.addEventListener("click", function (evt) {
