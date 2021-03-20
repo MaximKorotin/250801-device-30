@@ -157,6 +157,7 @@ a {
 
 
 .mine-header {
+  position: relative;
   grid-row: 1/2;
   grid-column: 1/-1;
   display: grid;
@@ -231,7 +232,6 @@ a {
 
 .container-navigation-top .input-search:focus,
 .container-navigation-top .input-search:active {
-  position: relative;
   width: 353px;
   padding: 17px 10px 13px 38px;
   border-bottom: 2px solid var(--basic-black);
