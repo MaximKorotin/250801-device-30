@@ -978,10 +978,6 @@ a {
 
 /* Container popular sections */
 
-.popular-sections-items .container-popular-sections {
-
-}
-
 .popular-section-link:hover .container-popular-sections,
 .popular-section-link:focus .container-popular-sections {
   background-color: var(--special-yellow-dark);
@@ -1240,8 +1236,8 @@ a {
   opacity: 0.2;
 }
 
-.brand-logo:hover .brand-logo-image,
-.brand-logo:focus .brand-logo-image {
+.brand-logo-link:hover .brand-logo-image,
+.brand-logo-link:focus .brand-logo-image {
   filter: grayscale(0);
   opacity: 1;
 }
